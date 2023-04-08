@@ -4,19 +4,16 @@ import { useState } from 'react';
 import axios from "axios";
 import Card from './Card';
 
-
 const buttons=[{name:"HOME",link:"#"},{name:"ABOUT",link:"#"},{name:"CATEGORIES",link:"#"}];
-
-
 
 const NavButton=({name,link})=>{
   return(
     <div className='hidden sm:ms-[2rem] sm:inline-block px-[3rem] py-[1rem]  rounded-full bg-[#0C1039] font-Roboto text-[#DEB992] hover:bg-[#202975] hover:text-teal-400 transition duration-300 delay-75'>
       <a href={link}>{name}</a>
     </div>
-  )
-
+  )  
 };
+
 
 const Header = () => {
   const [search,setSearch]=useState("")
@@ -45,9 +42,10 @@ const Header = () => {
               )
               }
               </div>
+              {/*search bar component*/}
               <div className=" mx-[4rem] sm:mx-[2rem] sm:px-[5rem] max-[860px]:mx-auto  py-[1rem] rounded-full min-h-full bg-[#202975] text-[#DEB992] hover:text-teal-400 sm:float-right block">
               <input type="text" placeholder='Search...' 
-              className='bg-[#202975] text-[#DEB992]' 
+              className='bg-[#202975] text-[#DEB992] shadow-none' 
               value={search} onChange={e=>setSearch(e.target.value)}
               onKeyDown={searchBooks}
               />
@@ -56,18 +54,9 @@ const Header = () => {
               >GO</button>
               </div>
         </div>
-      
-    </div>
-    <div className='container mx-auto py-36 px-8 '>
-      <div className='grid grid-cols-3 lg:grid-cols-5 md:grid-cols-4 gap-[3rem]'>
-        {/* {Books.map(book=>(
-              Card book={bookData}
+            <Card books={bookData}/>
 
-          />
-        ))} */}
-          <Card books={bookData}/>
-      </div>
-    </div>
+</div>
   </>
   )
 }
