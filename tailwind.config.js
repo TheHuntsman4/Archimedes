@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Roboto: ['Roboto Mono', "monospace"],
+        Archivo: [ 'Archivo Narrow', 'sans-serif'],
       },
     },
   },
