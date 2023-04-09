@@ -29,18 +29,15 @@ const Header = () => {
       {/*body of the app*/}
               
           {/*search bar component*/}
-              {/* <div className=" mx-auto sm:mx-[2rem] sm:px-[5rem] py-[1rem] rounded-full min-h-full bg-[#202975] text-[#DEB992] hover:text-teal-400  block"> */}
+              {/* <div className=" mx-auto  rounded-full min-h-full bg-[#202975] text-[#DEB992] hover:text-teal-400  inline-block"> */}
 
               <input type="text" placeholder='Search...' 
-              className=  'mt-[1rem] p-[1rem] text-center rounded-full bg-[#202975] text-[#DEB992] shadow-none' 
+              className=  'text-md  mt-[1rem] p-[1rem] text-center rounded-tl-full rounded-bl-full bg-[#202975] text-[#DEB992] shadow-none' 
               value={search} onChange={e=>setSearch(e.target.value)}
               onKeyDown={searchBooks}
-              />
-              <div>
-              <button className='align-right p-[1rem] text-center rounded bg-[#202975] text-[#DEB992] shadow-none'
+              /><button className='align-right pb-[1.25rem] pl-[1.25rem] pr-[1.25rem] pt-[1.125rem]  text-center rounded-tr-full rounded-br-full bg-[#202975] text-[#DEB992] shadow-none'
               onClick={handleOnClick}
               ><BsSearch /></button>
-              </div>
               {/* </div> */}
         
         <div className='container mx-auto py-36 px-8 '>

@@ -1,13 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 import {BookCard, Header, Landing, Categories } from './components';
 import NavBar  from './components/NavBar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-        {/* { <><NavBar /><Header /></> } */}
-        <Categories />
-
+        <>
+        <NavBar />
+        <Routes >
+        <Route path='/' element={<Header />} />
+        
+        <Route path='/categories' element={<Categories />} />
+        </Routes>
+    </>
     </div>
   );
 }

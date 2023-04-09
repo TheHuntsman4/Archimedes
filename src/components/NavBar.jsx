@@ -31,7 +31,7 @@ export default function Navbar({ fixed }) {
               <li className="nav-item">
                 <a
                   className=" flex items-center uppercase leading-snug"
-                  href="#pablo"
+                  href="/"
                 >
                   <span className=" px-3 py-2 rounded-full hover:bg-[#202975]  text-[#DEB992] text-xl font-Roboto">HOME</span>
                 </a>
@@ -39,7 +39,7 @@ export default function Navbar({ fixed }) {
               <li className="nav-item">
                 <a
                   className=" flex items-center text-xl uppercase  leading-snug "
-                  href="#pablo"
+                  href="/about"
                 >
                   <span className="px-3 py-2 rounded-full hover:bg-[#202975] text-[#DEB992] text-xl font-Roboto ">ABOUT</span>
                 </a>
@@ -47,7 +47,7 @@ export default function Navbar({ fixed }) {
               <li className="nav-item">
                 <a
                   className=" flex items-center text-xl uppercase  leading-snug "
-                  href="#pablo"
+                  href="/categories"
                 >
                   <span className="px-3 py-2 rounded-full hover:bg-[#202975] text-[#DEB992] text-xl font-Roboto">CATEGORIES</span>
                 </a>

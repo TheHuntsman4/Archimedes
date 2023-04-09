@@ -24,8 +24,7 @@ const handleOnClick=(search)=>{
 }
 
 return (
-    <>
-    <Navbar />    
+    <>  
     <div className='container  mx-auto py-10  px-8 '>
     <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-[3rem]'>
     {Hide ? 
