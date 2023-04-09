@@ -1,6 +1,6 @@
 import { useState,React}  from 'react';
 import Card from './Card';
-import Search from './Search'  ;
+import Search from './Categories'  ;
 
 const Books=[{title:"something", author:"someone",image:"/home/the_architect/Personal/MyBookList/mybooklist/public/assests/books/foo.jpg"},
 {title:"something", author:"Id deserunt dolore quis magna id fugiat eiusmod exercitation cupidatat ad.",image:'/home/the_architect/Personal/MyBookList/mybooklist/public/assests/books/foo.jpg'},
