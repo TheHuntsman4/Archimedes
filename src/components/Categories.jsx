@@ -2,10 +2,36 @@ import React from 'react'
 import Navbar from './NavBar'
 import { ReactComponent as Logo } from '../images/fiction.svg';
 import { useState } from 'react';
-import Card from './Card';
+import Card from './Cards';
 import axios from 'axios';
+import {motion} from 'framer-motion'
 
 const Categories = () => {
+
+    const listVariants = {
+        hidden: {
+          transition: {
+            staggerChildren: 0.1,
+            staggerDirection: -1
+          }
+        },
+        visible: {
+          transition: {
+            staggerChildren: 0.1
+          }
+        }
+      };
+      
+      const itemVariants = {
+        hidden: {
+          opacity: 0,
+          x: -16
+        },
+        visible: {
+          opacity: 1,
+          x: 0
+        }
+      };
 
 const [Hide,setHide]=useState(true)
 const [bookData,setBookData]=useState([])
@@ -26,17 +52,23 @@ const handleOnClick=(search)=>{
 return (
     <>  
     <div className='container  mx-auto py-10  px-8 '>
-    <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-[3rem]'>
+    <div className='grid grid-cols-1 lg:grid-cols-5 md:grid-cols-3 gap-[3rem]'>
+        
     {Hide ? 
-    <>
+    < >
     {Genres.map(Genre=>(    
-        <div className={'h-auto w-full '+Genre.gradient} onClick={()=>{handleOnClick(Genre.name)}}>
+        <motion.div 
+        variants={listVariants}
+        initial="hidden"
+        animate="show"
+        className={'h-auto w-full cursor-pointer hover:scale-125 hover:border-white hover:border '+Genre.gradient} onClick={()=>{handleOnClick(Genre.name)}}>
+            
             <span>
             <h3 className={'text-black text-left p-[2rem] text-xl uppercase text-bold'+Genre.gradient}>{Genre.name}</h3>
             </span>
-        </div>
+        </motion.div>
     ))}
-    setHide(false)
+    setHide(false)gcos
     </>
         :
     <Card books={bookData}/>}
@@ -50,5 +82,4 @@ return (
 
 
 export default Categories
-
-
+     

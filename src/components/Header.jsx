@@ -2,8 +2,36 @@ import React from 'react';
 import {ReactComponent as Icon1} from '../images/Mediamodifier-Design (21).svg';
 import { useState } from 'react';
 import axios from "axios";
-import Card from './Card';
+import Cards from './Cards';
 import {BsSearch} from 'react-icons/bs'
+import {motion} from 'framer-motion';
+import Landing from './landing';
+
+const listVariants = {
+  hidden: {
+    transition: {
+      staggerChildren: 0.1,
+      staggerDirection: -1
+    }
+  },
+  visible: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    x: -16
+  },
+  visible: {
+    opacity: 1,
+    x: 0
+  }
+};
+
 
 
 const Header = () => {
@@ -20,7 +48,6 @@ const Header = () => {
       axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&maxResults=30'+'&key=AIzaSyD6fYDSn8C9QRVd96Za2SPTklhbllnpGL4')
       .then(res=>(setBookData(res.data.items)))
   }
-  console.log(bookData)
   
   return (
     <>
@@ -39,13 +66,16 @@ const Header = () => {
               onClick={handleOnClick}
               ><BsSearch /></button>
               {/* </div> */}
-        
+        {bookData.length===0 ? <Landing /> :
         <div className='container mx-auto py-36 px-8 '>
-        <div className='grid grid-cols-3 lg:grid-cols-5 md:grid-cols-4 gap-[3rem]'>
-            <Card books={bookData}/>
+        <motion.div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-[3rem]'
+        variants={listVariants}
+        initial="hidden"
+        animate="show">
+            <Cards books={bookData}/>
+        </motion.div>
         </div>
-        </div>
-
+}
 </div>
   </>
   )

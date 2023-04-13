@@ -28,12 +28,12 @@ export default function Navbar({ fixed }) {
             id="example-navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="nav-item">
+              <li className="font-Lato ">
                 <a
                   className=" flex items-center uppercase leading-snug"
                   href="/"
                 >
-                  <span className=" px-3 py-2 rounded-full hover:bg-[#202975]  text-[#DEB992] text-xl font-Roboto">HOME</span>
+                  <span className=" px-3 py-2 rounded-full hover:bg-[#202975]  text-[#DEB992] text-xl font-Lato">HOME</span>
                 </a>
               </li>
               <li className="nav-item">
@@ -41,7 +41,7 @@ export default function Navbar({ fixed }) {
                   className=" flex items-center text-xl uppercase  leading-snug "
                   href="/about"
                 >
-                  <span className="px-3 py-2 rounded-full hover:bg-[#202975] text-[#DEB992] text-xl font-Roboto ">ABOUT</span>
+                  <span className="px-3 py-2 rounded-full hover:bg-[#202975] text-[#DEB992] text-xl font-Lato ">ABOUT</span>
                 </a>
               </li>
               <li className="nav-item">
@@ -49,7 +49,7 @@ export default function Navbar({ fixed }) {
                   className=" flex items-center text-xl uppercase  leading-snug "
                   href="/categories"
                 >
-                  <span className="px-3 py-2 rounded-full hover:bg-[#202975] text-[#DEB992] text-xl font-Roboto">CATEGORIES</span>
+                  <span className="px-3 py-2 rounded-full hover:bg-[#202975] text-[#DEB992] text-xl font-Lato">CATEGORIES</span>
                 </a>
               </li>
             </ul>
