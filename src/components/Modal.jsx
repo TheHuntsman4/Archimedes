@@ -28,7 +28,7 @@ export default function Modal({title,author,image,preview}) {
     
   const [modal, setModal] = useState(false);
   const toggleModal = () => {
-    setResponse=("");
+    setResponse("");
     setModal(!modal);
   };
   if(modal) {
@@ -39,9 +39,15 @@ export default function Modal({title,author,image,preview}) {
 
   return (
     <>
-      <button onClick={toggleModal} className="block mx-auto my-auto">
-      <img src={BookIcon} className='mx-[3rem] pt-[1vh] h-[9vw] md:h-[5vw] lg:h-[2.5vw]' />
-      </button>
+        <div className='rounded-lg h-[30rem] w-auto  bg-[#202975] hover:scale-[1.1] ' onClick={toggleModal} >
+          <img className="mx-auto  p-[2rem] h-[15rem] w-[11rem] " src={image}  ></img>
+          <div className='block object-cover  w-full'></div>
+          <div className='flex justify-left  h-[5vh] w-[12.5%]' ></div>
+          <div className='text-[5.25vw] md:text-[2vh] lg:text-[1.25vw] font-Archivo font-bold	 text-left text-[#DEB992] p-[1rem] ' ><a target="_blank" href={preview}>{title}</a></div>
+          <div className=' sm:content md:content text-[4vw] md:text-[2vh] text-left text-[#DEB992] p-[1rem] overflow-clip'>{author}</div>
+      </div>
+
+
 
       {modal && (
         <div className="modal">
@@ -49,7 +55,7 @@ export default function Modal({title,author,image,preview}) {
 
           
 
-          <div className="absolute top-1/2 left-1/2 bg-[#202975] text-[#DEB992] -translate-x-1/2 -translate-y-1/2 w-[full] h-[50%] overflow-y-auto p-[2rem]">
+          <div className="absolute top-1/2 left-1/2 bg-[#202975] text-[#DEB992] -translate-x-1/2 -translate-y-1/2 w-[full] h-[50%] w-auto overflow-y-auto p-[2rem]">
           <div className="grid lg:grid-cols-2 gap-2 p-[1rem] sm:grid-cols-1">
             <div><img src={image} className="h-300px w-[200px]"/></div>
             <div className="text-center uppercase text-[2rem] font-Roboto">{title}
