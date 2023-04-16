@@ -1,8 +1,6 @@
 import React from 'react'
-import ChatGPT from './chatgpt'
 import axios from 'axios';
 import { useState } from 'react';
-import Popup from './Popup';
 import Modal from './Modal';
 import BookIcon from '../images/book-opened-svgrepo-com.svg';
 
@@ -12,7 +10,6 @@ const Single_Card = ({title,author,img1,preview}) => {
 
   const name=title;
   const writer=author;
-  console.log("this is the name ",name)
   const [response, setResponse] = useState("");
   const HTTP = "http://localhost:8080/chat";
   

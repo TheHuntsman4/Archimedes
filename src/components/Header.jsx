@@ -56,16 +56,12 @@ const Header = () => {
       {/*body of the app*/}
               
           {/*search bar component*/}
-              {/* <div className=" mx-auto  rounded-full min-h-full bg-[#202975] text-[#DEB992] hover:text-teal-400  inline-block"> */}
 
               <input type="text" placeholder='Search...' 
-              className=  'text-md  mt-[1rem] p-[1rem] text-center rounded-tl-full rounded-bl-full bg-[#202975] text-[#DEB992] shadow-none' 
+              className=  'text-md  mt-[1rem] p-[1rem] text-center  rounded-full bg-[#202975] text-[#DEB992] shadow-none' 
               value={search} onChange={e=>setSearch(e.target.value)}
               onKeyDown={searchBooks}
-              /><button className='align-right pb-[1.25rem] pl-[1.25rem] pr-[1.25rem] pt-[1.125rem]  text-center rounded-tr-full rounded-br-full bg-[#202975] text-[#DEB992] shadow-none'
-              onClick={handleOnClick}
-              ><BsSearch /></button>
-              {/* </div> */}
+              />
         {bookData.length===0 ? <Landing /> :
         <div className='container mx-auto py-36 px-8 '>
         <motion.div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-[3rem]'
