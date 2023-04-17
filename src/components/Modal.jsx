@@ -57,7 +57,7 @@ export default function Modal({title,author,image,preview,description}) {
 
           <div className="absolute top-1/2 left-1/2 bg-[#0C1039] text-[#DEB992] -translate-x-1/2 -translate-y-1/2  h-[50%] w-auto overflow-y-auto overflow-x-hidden p-[2rem] rounded-lg ">
           <div className="grid lg:grid-cols-2 gap-2 p-[1rem] sm:grid-cols-1"> 
-            <div><img src={image} className=" h-[17rem] w-[12rem] lg:h-[25rem] lg:w-[12rem]"/></div>
+            <div><img src={image} className=" h-[17rem] w-[14rem] lg:h-[25rem] lg:w-[12rem]"/></div>
             <div className="text-left uppercase font-bold text-[2rem] font-Roboto">{title}
             <div className="text-left  uppercase font-weight text-[2vh] pt-[1rem] pb-[1rem] font-Archivo">{author}</div>
             <div className="text-left uppercase text-[1rem] pb-[1rem] font-Archivo"><a target="_blank" href={preview}>Live Preview Link</a></div>
