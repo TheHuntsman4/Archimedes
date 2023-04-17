@@ -12,10 +12,8 @@ function App() {
         <Route path='/' element={<Header />} />
         <Route path="/about" element={<About />} />
         <Route path='/categories' element={<Categories />} />
-        </Routes>
-        
+        </Routes> 
     </>
-    <Footer />
     </div>
   );
 }
