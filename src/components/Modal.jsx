@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "./Modal.css";
 import axios from "axios";
 import { ReactComponent as Cross} from '../images/cross.svg'
+import Spinner from "./Spinner.tsx";
 
 export default function Modal({title,author,image,preview}) {
 
   let [response, setResponse] = useState("");
-  const HTTP = "http://localhost:8080/chat";
+  const HTTP = "http://localhost:8008/chat";
 
   const handleSubmit = ({title}) => {
     const prompt=("chapter-wise notes on " +title+" by "+author)
@@ -67,7 +68,7 @@ export default function Modal({title,author,image,preview}) {
               onClick={()=>handleSubmit({title})}>
                 Generate
             </button>
-            <div className={response ?"text-[#DEB992] my-auto text-[2vh] text-left"  :"text-[#DEB992] text-[2vh] text-center "}>{response ? response : "Click the Generate button to generatae notes"}</div>
+            <div className={response ?"text-[#DEB992] my-auto text-[2vh] text-left"  :"text-[#DEB992] text-[2vh] text-center "}>{response ? response : <Spinner />}</div>
             
             <button className="close-modal" onClick={toggleModal}>
             <Cross className=" translate-x-1/2 h-[20px]"/> 

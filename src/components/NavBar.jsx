@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import logo from '../images/Mediamodifier-Design (21).svg'
+import logo from '../images/archimedes logo beige.svg'
 import {FiMenu} from 'react-icons/fi';
 
 
@@ -8,10 +8,10 @@ export default function Navbar({ fixed }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-[#0C1039] mb-3">
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-[#0C1039] mb-3 h-[10rem]">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-          <img src={logo} width={220} height={55} />
+          <img src={logo} className=' h-[10vh] translate-x-[-5rem] ' />
             <button
               className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
