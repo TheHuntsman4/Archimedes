@@ -32,7 +32,7 @@ app.post("/chat", async (req, res) => {
   res.send(completion.data.choices[0].text);
 });
 
-const PORT = 8008;
+const PORT = 8008
 
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`);

@@ -15,7 +15,7 @@ const Cards =({books})=>{
                 {
                     return (
                         <>
-                        <Single_Card title={book.volumeInfo.title} author={book.volumeInfo.authors} img1={thumbnail} preview={book.volumeInfo.previewLink} />
+                        <Single_Card title={book.volumeInfo.title} author={book.volumeInfo.authors} img1={thumbnail} preview={book.volumeInfo.previewLink} description={book.volumeInfo.description}/>
                         </>
                     )
                 }

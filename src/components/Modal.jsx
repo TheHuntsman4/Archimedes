@@ -4,7 +4,7 @@ import axios from "axios";
 import { ReactComponent as Cross} from '../images/cross.svg'
 import Spinner from "./Spinner.tsx";
 
-export default function Modal({title,author,image,preview}) {
+export default function Modal({title,author,image,preview,description}) {
 
   let [response, setResponse] = useState("");
   const HTTP = "http://localhost:8008/chat";
@@ -28,7 +28,7 @@ export default function Modal({title,author,image,preview}) {
     
   const [modal, setModal] = useState(false);
   const toggleModal = () => {
-    setResponse("");
+    
     setModal(!modal);
   };
   if(modal) {
@@ -56,11 +56,12 @@ export default function Modal({title,author,image,preview}) {
           
 
           <div className="absolute top-1/2 left-1/2 bg-[#0C1039] text-[#DEB992] -translate-x-1/2 -translate-y-1/2  h-[50%] w-auto overflow-y-auto overflow-x-hidden p-[2rem] rounded-lg ">
-          <div className="grid lg:grid-cols-2 gap-2 p-[1rem] sm:grid-cols-1">
-            <div><img src={image} className=" h-[100px] w-[50px] lg:h-full lg:w-[200px]"/></div>
+          <div className="grid lg:grid-cols-2 gap-2 p-[1rem] sm:grid-cols-1"> 
+            <div><img src={image} className=" h-[17rem] w-[12rem] lg:h-[25rem] lg:w-[12rem]"/></div>
             <div className="text-left uppercase font-bold text-[2rem] font-Roboto">{title}
             <div className="text-left  uppercase font-weight text-[2vh] pt-[1rem] pb-[1rem] font-Archivo">{author}</div>
-            <div className="text-left uppercase text-[1rem] font-Archivo"><a target="_blank" href={preview}>Live Link</a></div>
+            <div className="text-left uppercase text-[1rem] pb-[1rem] font-Archivo"><a target="_blank" href={preview}>Live Preview Link</a></div>
+            <div className="text-left text-[1rem] font-Archivo">{description ? description : "Description unavailable"}</div>
             </div>
             
             </div>
@@ -68,7 +69,7 @@ export default function Modal({title,author,image,preview}) {
               onClick={()=>handleSubmit({title})}>
                 Generate
             </button>
-            <div className={response ?"text-[#DEB992] my-auto text-[2vh] text-left"  :"text-[#DEB992] text-[2vh] text-center "}>{response ? response : <Spinner />}</div>
+            <div className={response ?"text-[#DEB992] my-auto text-[2vh] text-left"  :"text-[#DEB992] text-[2vh] text-center "}>{response ? response : "Click the 'Generate' button to generate notes for this book "}</div>
             
             <button className="close-modal" onClick={toggleModal}>
             <Cross className=" translate-x-1/2 h-[20px]"/> 

@@ -6,7 +6,7 @@ import BookIcon from '../images/book-opened-svgrepo-com.svg';
 
 
 
-const Single_Card = ({title,author,img1,preview}) => {
+const Single_Card = ({title,author,img1,preview,description}) => {
 
   const name=title;
   const writer=author;
@@ -38,7 +38,7 @@ const Single_Card = ({title,author,img1,preview}) => {
   return (
     
     <>
-        <Modal title={name} author={writer} image={img1} preview={preview}/> 
+        <Modal title={name} author={writer} image={img1} preview={preview} description={description}/> 
     </>
   )
 }
