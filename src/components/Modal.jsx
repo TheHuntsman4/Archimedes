@@ -38,14 +38,15 @@ export default function Modal({title,author,image,preview,description}) {
 
   return (
     <>
-        <div className='rounded-lg h-[30rem] w-auto  bg-[#202975] hover:scale-[1.1] ' onClick={toggleModal} >
-          <img className="mx-auto  p-[2rem] h-[15rem] w-[11rem] " src={image}  ></img>
-          <div className='block object-cover  w-full'></div>
-          <div className='flex justify-left  h-[5vh] w-[12.5%]' ></div>
-          <div className='text-[5.25vw] md:text-[2vh] lg:text-[1.25vw] font-Archivo font-bold	 text-left text-[#DEB992] p-[1rem] ' >{title}</div>
-          <div className=' sm:content md:content text-[4vw] md:text-[2vh] text-left text-[#DEB992] p-[1rem] overflow-clip'>{author}</div>
-      </div>
 
+      <div className="grid grid-cols-2 justify-center align-middle rounded-lg bg-[#202975] p-[2rem]" onClick={toggleModal}>
+        <img className="h-[10rem] w-full " src={image}></img>
+        <div className="flex flex-col justify-start align-middle">
+          <p className="text-[3rem] md:text-[2vh] lg:text-[1.25vw] font-Archivo font-bold	 text-left text-[#DEB992] px-[1.5 rem] ">{title}</p>
+          <p className="sm:content md:content text-[4vw] md:text-[2vh] text-left text-[#DEB992] px-[1.5rem] overflow-clip">{author}</p>
+        </div>
+
+      </div>
 
 
       {modal && (

@@ -5,6 +5,7 @@
 
 body{
     background-color: #0C1029;
+    min-width: 300px;
 }
 
 .App-logo {
