@@ -5,7 +5,7 @@ import axios from "axios";
 import Cards from './Cards';
 import {BsSearch} from 'react-icons/bs'
 import {motion} from 'framer-motion';
-import Landing from './landing';
+import { Landing } from '../pages';
 
 const listVariants = {
   hidden: {
@@ -40,12 +40,12 @@ const Header = () => {
 
   const searchBooks=(event)=>{
     if(event.key==="Enter"){
-        axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&maxResults=50'+'&key=AIzaSyD6fYDSn8C9QRVd96Za2SPTklhbllnpGL4')
+        axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&maxResults=40'+'&key=AIzaSyD6fYDSn8C9QRVd96Za2SPTklhbllnpGL4')
         .then(res=>(setBookData(res.data.items)))
     }
   }
   const handleOnClick=()=>{
-      axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&maxResults=50'+'&key=AIzaSyD6fYDSn8C9QRVd96Za2SPTklhbllnpGL4')
+      axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&maxResults=40'+'&key=AIzaSyD6fYDSn8C9QRVd96Za2SPTklhbllnpGL4')
       .then(res=>(setBookData(res.data.items)))
   }
   

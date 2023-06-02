@@ -1,5 +1,5 @@
 import React from 'react'
-import Landing from './landing'
+import Landing from '../pages/landing'
 import Single_Card from './Single_Card'
 
 

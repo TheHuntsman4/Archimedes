@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Modal.css";
 import axios from "axios";
 import { ReactComponent as Cross} from '../images/cross.svg'
-import Spinner from "./Spinner.tsx";
 
 export default function Modal({title,author,image,preview,description}) {
 
@@ -21,7 +20,7 @@ export default function Modal({title,author,image,preview,description}) {
       .catch((error) => {
         console.log(error);
       });
-      if(response.length!=0){
+      if(response.length=0){
         console.log(response)
       }  
   }

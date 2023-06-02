@@ -41,3 +41,13 @@ body{
     transform: rotate(360deg);
   }
 }
+
+::-webkit-scrollbar{
+  height: 100px;
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #deb992;
+  border-radius:1rem;
+}
