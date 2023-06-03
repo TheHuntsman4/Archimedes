@@ -42,7 +42,7 @@ export default function Modal({title,author,image,preview,description}) {
       <div className="grid grid-cols-2 justify-center align-middle rounded-lg bg-[#202975] p-[2rem]" onClick={toggleModal}>
         <img className="h-[10rem] w-full " src={image}></img>
         <div className="flex flex-col justify-start align-middle">
-          <p className="text-[3rem] md:text-[2vh] lg:text-[1.25vw] font-Archivo font-bold	 text-left text-[#DEB992] px-[1.5 rem] ">{title}</p>
+          <p className="text-[1rem] md:text-[2vh] lg:text-[1.25vw] font-Archivo font-bold text-left text-[#DEB992] px-[1.5rem] ">{title}</p>
           <p className="sm:content md:content text-[4vw] md:text-[2vh] text-left text-[#DEB992] px-[1.5rem] overflow-clip">{author}</p>
         </div>
 
@@ -57,7 +57,7 @@ export default function Modal({title,author,image,preview,description}) {
 
           <div className="absolute top-1/2 left-1/2 bg-[#0C1039] text-[#DEB992] -translate-x-1/2 -translate-y-1/2  h-[50%] w-auto overflow-y-auto overflow-x-hidden p-[2rem] rounded-lg ">
           <div className="grid lg:grid-cols-2 gap-2 p-[1rem] sm:grid-cols-1"> 
-            <div><img src={image} className=" h-[17rem] w-[14rem] lg:h-[25rem] lg:w-[12rem]"/></div>
+            <div><img src={image} className=" h-[17rem] w-[14rem] lg:h-full lg:w-full pr-[1rem] rounded-lg"/></div>
             <div className="text-left uppercase font-bold text-[2rem] font-Roboto">{title}
             <div className="text-left  uppercase font-weight text-[2vh] pt-[1rem] pb-[1rem] font-Archivo">{author}</div>
             <div className="text-left uppercase text-[1rem] pb-[1rem] font-Archivo"><a target="_blank" href={preview}>Live Preview Link</a></div>
