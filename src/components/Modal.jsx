@@ -42,7 +42,7 @@ export default function Modal({title,author,image,preview,description}) {
       <div className="grid grid-cols-2 justify-center align-middle rounded-lg bg-[#202975] p-[2rem]" onClick={toggleModal}>
         <img className="h-[10rem] w-full " src={image}></img>
         <div className="flex flex-col justify-start align-middle">
-          <p className="text-[1rem] md:text-[2vh] lg:text-[1.25vw] font-Archivo font-bold text-left text-[#DEB992] px-[1.5rem] ">{title}</p>
+          <p className="text-[1rem] md:text-[2vh] lg:text-[1.25vw] font-Archivo font-bold text-left text-[#DEB992] px-[1.5rem] ">{title.length>20 ? title = title.substring(0, 20)+"..." : title=title}</p>
           <p className="sm:content md:content text-[4vw] md:text-[2vh] text-left text-[#DEB992] px-[1.5rem] overflow-clip">{author}</p>
         </div>
 
