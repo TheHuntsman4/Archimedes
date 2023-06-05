@@ -1,6 +1,6 @@
 import React from 'react'
 import Landing from '../pages/landing'
-import Single_Card from './Single_Card'
+import Modal from './Modal'
 
 
 
@@ -15,7 +15,7 @@ const Cards =({books})=>{
                 {
                     return (
                         <>
-                        <Single_Card title={book.volumeInfo.title} author={book.volumeInfo.authors} img1={thumbnail} preview={book.volumeInfo.previewLink} description={book.volumeInfo.description}/>
+                        <Modal title={book.volumeInfo.title} author={book.volumeInfo.authors} image={thumbnail} preview={book.volumeInfo.previewLink} description={book.volumeInfo.description}/>
                         </>
                     )
                 }
