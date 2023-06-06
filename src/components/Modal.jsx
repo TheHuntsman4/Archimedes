@@ -8,8 +8,8 @@ export default function Modal({title,author,image,preview,description}) {
   let [response, setResponse] = useState("");
   const HTTP = "http://localhost:8008/chat";
 
-  const handleSubmit = ({title,author}) => {
-    const prompt=("chapter-wise notes on " +title+" by "+author)
+  const handleSubmit = ({title}) => {
+    const prompt=("summary in 200 words for the book " +title)
     axios
       .post(`${HTTP}`, { prompt })
       .then((res) => {
@@ -38,14 +38,14 @@ export default function Modal({title,author,image,preview,description}) {
 
   return (
     <>
-
-      <div className="grid grid-cols-2 justify-center align-middle rounded-lg bg-[#202975] p-[2rem] hover:scale-105" onClick={toggleModal}>
-        <img className="h-[10rem] w-full " src={image}></img>
+      {/* Note: the comment div is a prototype which calls both toggleModal and handleSubmit functions */}
+      {/* <div className="grid md:grid-cols-2 grid-cols-1 justify-center align-middle rounded-lg bg-[#202975] p-[2rem] ease-in-out duration-300 hover:scale-[1.15] shadow-2xl shadow-black" onClick={()=>{toggleModal();handleSubmit(title);}}> */}
+      <div className="grid md:grid-cols-2 grid-cols-1 justify-center align-middle rounded-lg bg-[#202975] p-[2rem] ease-in-out duration-300 hover:scale-[1.15] shadow-2xl shadow-black" onClick={()=>{toggleModal();handleSubmit(title);}}>
+        <img className="h-[10rem] w-[50%] md:w-full justify-self-center place-items-center" src={image}></img>
         <div className="flex flex-col justify-start align-middle">
           <p className="text-[1rem] md:text-[2vh] lg:text-[1.25vw] font-Archivo font-bold text-left text-[#DEB992] px-[1.5rem] ">{title.length>20 ? title = title.substring(0, 20)+"..." : title=title}</p>
           <p className="sm:content md:content text-[4vw] md:text-[2vh] text-left text-[#DEB992] px-[1.5rem] overflow-clip">{author}</p>
         </div>
-
       </div>
 
 
@@ -66,7 +66,7 @@ export default function Modal({title,author,image,preview,description}) {
             
             </div>
             <button className="text-[1.5rem] bg-[#0C1039] rounded-full p-[1vh] hover:bg-[#DEB992] hover:text-[#0C1039]"
-              onClick={()=>handleSubmit({title,author})}>
+              onClick={()=>handleSubmit({title})} >
                 Generate
             </button>
             <div className={response ?"text-[#DEB992] my-auto text-[2vh] text-left"  :"text-[#DEB992] text-[2vh] text-center "}>{response ? response : "Click the 'Generate' button to generate notes for this book "}</div>

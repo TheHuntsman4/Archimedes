@@ -6,10 +6,10 @@ import './styles/navbar.css';
 
 
 export default function Navbar({ fixed }) {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3  mb-3 h-[10%] bg-[#DCCFC0] rounded-full mt-[2rem]">
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3  mb-3 h-[10%] bg-[#DCCFC0] md:rounded-full mt-[2rem]">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between bg-[#DCCFC0]">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start bg-[#DCCFC0]">
           <img src={logo} className='p-[2rem] bg-[#DCCFC0] hide-in-mobile' height={"200px"} width={"200px"} />
