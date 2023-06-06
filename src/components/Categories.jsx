@@ -44,7 +44,7 @@ const Genres=[{name:"Fiction",gradient:"bg-gradient-to-r from-[#78cce2] to-trans
 {name:"Thriller",gradient:"bg-gradient-to-r from-[#fa9884] to-transparent"},{name:"Travel",gradient:"bg-gradient-to-r from-[#e49393] to-transparent"},{name:"Women",gradient:"bg-gradient-to-r from-[#f7c8e0] to-transparent"},{name:"Young",gradient:"bg-gradient-to-r from-[#ffacac] to-transparent"},{name:"Architecture",gradient:"bg-gradient-to-r from-[#408e91] to-transparent"},{name:"Biology",gradient:"bg-gradient-to-r from-[#b9f3e4] to-transparent"},{name:"Philosophy",gradient:"bg-gradient-to-r from-[#c7e9b0] to-transparent"},{name:"Indian",gradient:"bg-gradient-to-r from-[#febe8c] to-transparent"},];
   
 const handleOnClick=(search)=>{
-    axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&maxResults=30'+'&key=AIzaSyD6fYDSn8C9QRVd96Za2SPTklhbllnpGL4')
+    axios.get('https://www.googleapis.com/books/v1/volumes?q='+'subject:'+search+'&maxResults=30'+'&key=AIzaSyD6fYDSn8C9QRVd96Za2SPTklhbllnpGL4')
     .then(res=>(setBookData(res.data.items)))
     setHide(!Hide);
 }

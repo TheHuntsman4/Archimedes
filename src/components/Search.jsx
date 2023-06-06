@@ -34,7 +34,7 @@ const itemVariants = {
 
 
 
-const Header = () => {
+const Search = () => {
   const [search,setSearch]=useState("")
   const [bookData,setBookData]=useState([])
 
@@ -77,4 +77,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default Search;
