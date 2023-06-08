@@ -1,10 +1,13 @@
 .App {
   text-align: center;
   overflow-x: hidden;
+  overflow-y: hidden;
+  background: linear-gradient(150.55deg, #02000C -1.8%, rgb(68, 21, 134) 137.63%, #B480FF 137.65%);
+  /* background: linear-gradient(150.55deg, #010004 10.55%, rgba(105, 0, 255, 1) 137.65%); */
 }
 
 body{
-    background-color: #ffffff;
+    height: 100vh;
     min-width: 300px;
 }
 
@@ -43,12 +46,12 @@ body{
   }
 }
 
-::-webkit-scrollbar{
-  height: 100px;
-  width: 12px;
-}
-
-::-webkit-scrollbar-thumb{
-  background: #deb992;
-  border-radius:1rem;
-}
+  ::-webkit-scrollbar{
+    height: 100px;
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background: #deb992;
+    border-radius:1rem;
+  }

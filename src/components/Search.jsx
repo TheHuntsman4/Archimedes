@@ -51,7 +51,7 @@ const Search = () => {
   
   return (
     <>
-    <div className=' mb-[3rem] '>
+    <div className=' h-auto mb-[3rem] '>
 
       {/*body of the app*/}
               
