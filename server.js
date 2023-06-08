@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 const { Configuration, OpenAIApi } = require("openai");
 
 const config = new Configuration({
-  apiKey: "{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}",
+  apiKey: "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",
 });
 
 const openai = new OpenAIApi(config);
@@ -25,7 +25,7 @@ app.post("/chat", async (req, res) => {
 
   const completion = await openai.createCompletion({
     model: "gpt-3.5-turbo",
-    max_tokens: 4000,
+    max_tokens: 2000,
     temperature: 0,
     prompt: prompt,
   });

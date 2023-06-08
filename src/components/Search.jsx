@@ -39,19 +39,15 @@ const Search = () => {
   const [bookData,setBookData]=useState([])
 
   const searchBooks=(event)=>{
-    if(event.key==="Enter"){
-        axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&maxResults=40'+'&key=AIzaSyD6fYDSn8C9QRVd96Za2SPTklhbllnpGL4')
+    {
+        axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&maxResults=40'+'&AIzaSyAzmQ7izC2jVkxwEcIMquxd3okPismPwOw')
         .then(res=>(setBookData(res.data.items)))
     }
-  }
-  const handleOnClick=()=>{
-      axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&maxResults=40'+'&key=AIzaSyD6fYDSn8C9QRVd96Za2SPTklhbllnpGL4')
-      .then(res=>(setBookData(res.data.items)))
   }
   
   return (
     <>
-    <div className=' h-auto mb-[3rem] '>
+    <div className='h-auto mb-[3rem] '>
 
       {/*body of the app*/}
               
@@ -64,12 +60,9 @@ const Search = () => {
               />
         {bookData.length===0 ? <Landing /> :
         <div className='container mx-auto py-36 px-8 '>
-        <motion.div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-[3rem]'
-        variants={listVariants}
-        initial="hidden"
-        animate="show">
+        <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-[3rem]'>
             <Cards books={bookData}/>
-        </motion.div>
+        </div>
         </div>
 }
 </div>
