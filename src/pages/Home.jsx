@@ -51,7 +51,7 @@ const Home = () => {
        </div>
     </div>
     <section className=' m-[2rem]'>
-      <h2 className='font-semibold text-[#deb992] text-[3rem] underline underline-offset-8'>EXPLORE</h2>
+      <h2 className='font-semibold text-[#deb992] text-[3rem]'>EXPLORE</h2>
       <p className='text-center m-[2rem] text-[1rem] text-[#ADB7C6]'>Explore through our rich and expansive libraries</p>
         <h3 className='m-[2rem] text-[#deb992] text-[1.5rem] text-left'>FANTASY</h3>
         <div className='container mx-auto py-36 px-8 '>
