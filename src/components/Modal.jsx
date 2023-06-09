@@ -40,7 +40,7 @@ export default function Modal({title,author,image,preview,description}) {
     <>
       {/* Note: the comment div is a prototype which calls both toggleModal and handleSubmit functions */}
       {/* <div className="grid md:grid-cols-2 grid-cols-1 justify-center align-middle rounded-lg bg-[#202975] p-[2rem] ease-in-out duration-300 hover:scale-[1.15] shadow-2xl shadow-black" onClick={()=>{toggleModal();handleSubmit(title);}}> */}
-      <div className="grid md:grid-cols-2 grid-cols-1 justify-center align-middle rounded-lg bg-gradient-to-b from-[#0e70c0] to-transparent p-[2rem] ease-in-out duration-300 hover:scale-[1.15] shadow-2xl shadow-black" onClick={()=>{toggleModal()}}>
+      <div className="grid md:grid-cols-2 grid-cols-1 justify-center align-middle rounded-lg bg-gradient-to-b from-[#1269af] to-transparent p-[2rem] ease-in-out duration-300 hover:scale-[1.15] shadow-2xl shadow-black" onClick={()=>{toggleModal()}}>
         <img className="h-[10rem] w-[50%] md:w-full justify-self-center place-items-center" src={image}></img>
         <div className="flex flex-col justify-start align-middle">
           <p className="text-[1rem] md:text-[2vh] lg:text-[1.25vw] font-Archivo font-bold text-left text-[#DEB992] px-[1.5rem] ">{title.length>20 ? title = title.substring(0, 20)+"..." : title=title}</p>

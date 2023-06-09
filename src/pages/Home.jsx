@@ -30,6 +30,12 @@ const Home = () => {
     'https://www.googleapis.com/books/v1/volumes?q=subject:Fiction&maxResults=4&key=AIzaSyAzmQ7izC2jVkxwEcIMquxd3okPismPwOw')
     .then((res) => {
       setFictionData(res.data.items);});
+
+
+  axios.get(
+    'https://www.googleapis.com/books/v1/volumes?q=subject:Romance&maxResults=4&key=AIzaSyAzmQ7izC2jVkxwEcIMquxd3okPismPwOw')
+    .then((res) => {
+      setRomanceData(res.data.items);});
       
       const animation =useRef<LottieRefCurrentProps>(null);
   return (
@@ -54,21 +60,21 @@ const Home = () => {
         </div>
         </div>
 
-        <h3 className='m-[2rem] text-[#deb992] text-[1.5rem] text-left'>FANTASY</h3>
+        <h3 className='m-[2rem] text-[#deb992] text-[1.5rem] text-left'>POETRY</h3>
         <div className='container mx-auto py-36 px-8 '>
         <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-[3rem]'>
             <Cards books={PoetryData}/>
         </div>
         </div>
 
-        <h3 className='m-[2rem] text-[#deb992] text-[1.5rem] text-left'>FANTASY</h3>
+        <h3 className='m-[2rem] text-[#deb992] text-[1.5rem] text-left'>FICTION</h3>
         <div className='container mx-auto py-36 px-8 '>
         <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-[3rem]'>
             <Cards books={FictionData}/>
         </div>
         </div>
 
-        <h3 className='m-[2rem] text-[#deb992] text-[1.5rem] text-left'>FANTASY</h3>
+        <h3 className='m-[2rem] text-[#deb992] text-[1.5rem] text-left'>ROMANCE</h3>
         <div className='container mx-auto py-36 px-8 '>
         <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-[3rem]'>
             <Cards books={RomanceData}/>
