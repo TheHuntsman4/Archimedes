@@ -53,28 +53,28 @@ const Home = () => {
     <section className=' m-[2rem]'>
       <h2 className='font-semibold text-[#deb992] text-[3rem]'>EXPLORE</h2>
       <p className='text-center m-[2rem] text-[1rem] text-[#ADB7C6]'>Explore through our rich and expansive libraries</p>
-        <h3 className='m-[2rem] text-[#deb992] text-[1.5rem] text-left'>FANTASY</h3>
+        <h3 className='m-[1rem] text-[#deb992] text-[1.5rem] text-center'>FANTASY</h3>
         <div className='container mx-auto py-36 px-8 '>
         <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-[3rem]'>
             <Cards books={FantasyData}/>
         </div>
         </div>
 
-        <h3 className='m-[2rem] text-[#deb992] text-[1.5rem] text-left'>POETRY</h3>
+        <h3 className='m-[1rem] text-[#deb992] text-[1.5rem] text-center'>POETRY</h3>
         <div className='container mx-auto py-36 px-8 '>
         <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-[3rem]'>
             <Cards books={PoetryData}/>
         </div>
         </div>
 
-        <h3 className='m-[2rem] text-[#deb992] text-[1.5rem] text-left'>FICTION</h3>
+        <h3 className='m-[1rem] text-[#deb992] text-[1.5rem] text-center'>FICTION</h3>
         <div className='container mx-auto py-36 px-8 '>
         <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-[3rem]'>
             <Cards books={FictionData}/>
         </div>
         </div>
 
-        <h3 className='m-[2rem] text-[#deb992] text-[1.5rem] text-left'>ROMANCE</h3>
+        <h3 className='m-[1rem] text-[#deb992] text-[1.5rem] text-center'>ROMANCE</h3>
         <div className='container mx-auto py-36 px-8 '>
         <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-[3rem]'>
             <Cards books={RomanceData}/>

@@ -6,7 +6,7 @@ import logo from '../images/ARCHIMEDES.png'
 const About = () => {
   return (
     <div>
-        <div className=' text-[#DEB992] text-[2rem] text-left font-Lato w-full p-[2rem]'>
+        <div className=' text-[#DEB992] text-[2.5rem] text-left font-Lato w-full p-[2rem]'>
           About
         </div>
         <div className='grid grid-cols-1 '>
