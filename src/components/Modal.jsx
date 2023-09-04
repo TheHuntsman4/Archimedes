@@ -5,7 +5,7 @@ import { ReactComponent as Cross } from '../images/cross.svg';
 
 export default function Modal({ title, author, image, preview, description }) {
   const [response, setResponse] = useState("");
-  const HTTP = "http://localhost:8008/generate";
+  const HTTP = "http://localhost:8008/generate/somelink";
 
   const handleSubmit = () => {
     const prompt = "summary in 200 words for the book " + title;
